@@ -21,7 +21,7 @@ public class Solution {
 
         Scanner scan = new Scanner(System.in);
 
-        int counter = 0;
+        //int counter = 0;
 
         System.out.println();
         System.out.println("Choose : ");
@@ -30,30 +30,26 @@ public class Solution {
         System.out.println("3) Circle: ");
         System.out.println("4) Exit ");
         sumSquare = 0;
-        Shape[] shapeFigure = new Shape[DataSource.getShapes().length];
+        Shape[] shapeFigure = new Shape[shapes.length];
 
         int numMax = scan.nextInt();
         switch (numMax) {
             case 1:
                 shapeFigure = DataSource.getTriangles();
-                counter = DataSource.getTriangles().length;
                 break;
             case 2:
                 shapeFigure = DataSource.getRectangles();
-                counter = DataSource.getRectangles().length;
                 break;
             case 3:
                 shapeFigure = DataSource.getCircles();
-                counter = DataSource.getCircles().length;
+              //  counter = DataSource.getCircles().length;
                 break;
             default:
                 System.out.println("Choose existing variant ");
                 break;
         }
 
-        Shape[] shapeFigure2 = Arrays.copyOf(shapeFigure, counter);
-
-        for (Shape shape : shapeFigure2) {
+        for (Shape shape : shapeFigure) {
             sumSquare = sumSquare + shape.square();
         }
         System.out.println("Figure Square = " + sumSquare);

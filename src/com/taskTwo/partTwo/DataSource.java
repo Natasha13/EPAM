@@ -27,7 +27,8 @@ public class DataSource {
         return new Triangle[]{
                 new Triangle(4, 2, 3,"green"),
                 new Triangle(5, 8, 11,"yellow"),
-                new Triangle(12, 15, 18,"red")
+                new Triangle(12, 15, 18,"red"),
+                new Triangle(11, 15, 24,"white")
         };
     }
 
