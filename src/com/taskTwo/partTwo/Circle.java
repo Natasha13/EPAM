@@ -12,8 +12,7 @@ public class Circle extends Shape {
         this.a = a;
     }
     @Override public String toString(){
-        String s="Circle r="+a+" color ="+getColor();
-        return s;
+        return super.toString() + ", r="+a;
     }
     @Override public double square() {
         return Math.PI*a*a;

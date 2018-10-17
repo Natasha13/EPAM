@@ -56,7 +56,7 @@ public class Controller {
                     books = this.bookService.getAfterYear(numMax);
                     break;
                 case 5:
-                    System.out.println("Books publisher by alphabet: ");
+                    System.out.println("Books published byalphabet: ");
                     books = this.bookService.getPublisherByAlphabet();
                     break;
                 case 6:

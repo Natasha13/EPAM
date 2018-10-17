@@ -12,4 +12,13 @@ public abstract class Shape {
     }
 
     abstract public double square();
+
+    @Override
+    public String toString() {
+        return  this.getClass().getSimpleName() +
+                " color='" + color + '\'';
+    }
+    public String draw() {
+        return this.toString() + "Square = " + this.square();
+    }
 }

@@ -21,8 +21,6 @@ public class Solution {
 
         Scanner scan = new Scanner(System.in);
 
-        //int counter = 0;
-
         System.out.println();
         System.out.println("Choose : ");
         System.out.println("1) Triangle ");
@@ -42,7 +40,6 @@ public class Solution {
                 break;
             case 3:
                 shapeFigure = DataSource.getCircles();
-              //  counter = DataSource.getCircles().length;
                 break;
             default:
                 System.out.println("Choose existing variant ");
