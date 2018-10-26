@@ -9,15 +9,8 @@ public class Solution {
         Shape[] shapes = DataSource.getShapes();
         System.out.print( ShapesView.shapeForPrinting(shapes));
 
-        double sumSquare = 0;
         System.out.println();
-
-        for (Shape shape : shapes) {
-            sumSquare = sumSquare + shape.square();
-        }
-        System.out.println("sum square of all figures = " + sumSquare);
-
-        Scanner scan = new Scanner(System.in);
+        System.out.println("sum square of all figures = " + ShapeService.sumSquare(shapes));
 
         System.out.println();
         System.out.println("Choose : ");
@@ -25,9 +18,10 @@ public class Solution {
         System.out.println("2) Rectangle: ");
         System.out.println("3) Circle: ");
         System.out.println("4) Exit ");
-        sumSquare = 0;
+
         Shape[] shapeFigure = new Shape[shapes.length];
 
+        Scanner scan = new Scanner(System.in);
         int numMax = scan.nextInt();
         switch (numMax) {
             case 1:
@@ -43,27 +37,17 @@ public class Solution {
                 System.out.println("Choose existing variant ");
                 break;
         }
-
-        for (Shape shape : shapeFigure) {
-            sumSquare = sumSquare + shape.square();
-        }
-        System.out.println("Figure Square = " + sumSquare);
         scan.close();
+
+        System.out.println("Figure Square = " +  ShapeService.sumSquare(shapeFigure));
 
         System.out.println();
         Arrays.sort(shapes, Comparator.comparing(Shape::square));
         System.out.print( ShapesView.shapeForPrinting(shapes));
-//        for (Shape shape : shapes) {
-//            System.out.printf("Shape: " + shape + " Square = %1$.3f \n", shape.square());
-//        }
 
         System.out.println();
 
         Arrays.sort(shapes, Comparator.comparing(Shape::getColor));
         System.out.print( ShapesView.shapeForPrinting(shapes));
-//        for (Shape shape : shapes) {
-//            System.out.printf("Shape: " + shape + " Square = %1$.3f \n", shape.square());
-//        }
-
     }
 }
