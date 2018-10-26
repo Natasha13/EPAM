@@ -16,9 +16,12 @@ public class Rectangle extends Shape {
         this.a = a;
         this.b = b;
     }
+//    @Override public String toString(){
+//        String s="Rectangle a="+a+" b= "+b+" color ="+getColor();
+//        return s;
+//    }
     @Override public String toString(){
-        String s="Rectangle a="+a+" b= "+b+" color ="+getColor();
-        return s;
+        return super.toString() + ", a="+a+", b= "+b;
     }
 
     @Override public double square() {

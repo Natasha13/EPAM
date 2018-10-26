@@ -16,7 +16,7 @@ public abstract class Shape {
     @Override
     public String toString() {
         return  this.getClass().getSimpleName() +
-                " color='" + color + '\'';
+                " color=" + color ;
     }
     public String draw() {
         return this.toString() + "Square = " + this.square();

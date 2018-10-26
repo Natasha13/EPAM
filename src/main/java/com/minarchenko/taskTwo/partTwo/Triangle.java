@@ -34,8 +34,11 @@ public class Triangle extends Shape {
     }
 
 
+//    @Override public String toString(){
+//        String s="Triangle a="+a+" b= "+b+" c= "+c+ " color ="+getColor();
+//        return s;    }
+//
     @Override public String toString(){
-        String s="Triangle a="+a+" b= "+b+" c= "+c+ " color ="+getColor();
-        return s;
+        return super.toString() + ", a="+a+", b= "+b+", c= "+c;
     }
 }

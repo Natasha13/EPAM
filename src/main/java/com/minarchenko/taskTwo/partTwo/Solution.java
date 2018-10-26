@@ -7,10 +7,8 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         Shape[] shapes = DataSource.getShapes();
-        for (Shape shape : shapes) {
-            System.out.print(shape);
-            System.out.printf(" Square = %1$.3f \n", shape.square());
-        }
+        System.out.print( ShapesView.shapeForPrinting(shapes));
+
         double sumSquare = 0;
         System.out.println();
 
@@ -54,16 +52,18 @@ public class Solution {
 
         System.out.println();
         Arrays.sort(shapes, Comparator.comparing(Shape::square));
-        for (Shape shape : shapes) {
-            System.out.printf("Shape: " + shape + " Square = %1$.3f \n", shape.square());
-        }
+        System.out.print( ShapesView.shapeForPrinting(shapes));
+//        for (Shape shape : shapes) {
+//            System.out.printf("Shape: " + shape + " Square = %1$.3f \n", shape.square());
+//        }
 
         System.out.println();
 
         Arrays.sort(shapes, Comparator.comparing(Shape::getColor));
-        for (Shape shape : shapes) {
-            System.out.printf("Shape: " + shape + " Square = %1$.3f \n", shape.square());
-        }
+        System.out.print( ShapesView.shapeForPrinting(shapes));
+//        for (Shape shape : shapes) {
+//            System.out.printf("Shape: " + shape + " Square = %1$.3f \n", shape.square());
+//        }
 
     }
 }
