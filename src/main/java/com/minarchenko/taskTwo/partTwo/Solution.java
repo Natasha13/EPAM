@@ -1,5 +1,7 @@
 package com.minarchenko.taskTwo.partTwo;
 
+import com.minarchenko.taskTwo.partTwo.model.Shape;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;

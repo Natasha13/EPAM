@@ -1,4 +1,4 @@
-package com.minarchenko.taskTwo.partTwo;
+package com.minarchenko.taskTwo.partTwo.model;
 
 public class Circle extends Shape {
     private int a;

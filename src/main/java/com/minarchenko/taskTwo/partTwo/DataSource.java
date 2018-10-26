@@ -1,5 +1,10 @@
 package com.minarchenko.taskTwo.partTwo;
 
+import com.minarchenko.taskTwo.partTwo.model.Circle;
+import com.minarchenko.taskTwo.partTwo.model.Rectangle;
+import com.minarchenko.taskTwo.partTwo.model.Shape;
+import com.minarchenko.taskTwo.partTwo.model.Triangle;
+
 public class DataSource {
 
     public static Shape[] getShapes() {

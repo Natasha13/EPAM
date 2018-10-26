@@ -1,4 +1,6 @@
-package com.minarchenko.taskTwo.partTwo;
+package com.minarchenko.taskTwo.partTwo.model;
+
+import com.minarchenko.taskTwo.partTwo.model.Shape;
 
 public class Triangle extends Shape {
     private int a, b, c;

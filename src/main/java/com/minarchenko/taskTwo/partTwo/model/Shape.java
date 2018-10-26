@@ -1,4 +1,4 @@
-package com.minarchenko.taskTwo.partTwo;
+package com.minarchenko.taskTwo.partTwo.model;
 
 public abstract class Shape {
     private String color;
@@ -18,7 +18,8 @@ public abstract class Shape {
         return  this.getClass().getSimpleName() +
                 " color=" + color ;
     }
+
     public String draw() {
-        return this.toString() + "Square = " + this.square();
+        return this.toString() +String.format(" Square = %1$.3f \n", this.square());
     }
 }
