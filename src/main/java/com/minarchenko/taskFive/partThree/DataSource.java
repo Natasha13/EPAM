@@ -2,7 +2,6 @@ package com.minarchenko.taskFive.partThree;
 
 import java.util.HashMap;
 import java.util.Map;
-import javax.swing.JOptionPane;
 
 public  class DataSource {
         public static Map<String, String> input() {
