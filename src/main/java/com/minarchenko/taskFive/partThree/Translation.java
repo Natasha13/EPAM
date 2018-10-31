@@ -8,7 +8,6 @@ class TranslationService {
 
         String inputString= scan.nextLine();
         scan.close();
-        System.out.println("you write: " + inputString);
 
         String resultPhrase = "";
         for (String s : inputString.split(" ")) {
