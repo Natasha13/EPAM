@@ -4,6 +4,7 @@ import com.minarchenko.taskSix.model.Circle;
 import com.minarchenko.taskSix.model.Rectangle;
 import com.minarchenko.taskSix.model.Shape;
 import com.minarchenko.taskSix.model.Triangle;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -12,8 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataSource {
+    private static Logger logger = Logger.getLogger(DataSource.class);
 
     public static List<Shape> getShapes() {
+        logger.info("getShapes ");
         String csvFileTriangle = "C:/NATA/Java/Courses/EPAM/EPAM/src/main/resources/triangle.csv";
         String csvFileRectangle= "C:/NATA/Java/Courses/EPAM/EPAM/src/main/resources/rectangle.csv";
         String csvFileCircle= "C:/NATA/Java/Courses/EPAM/EPAM/src/main/resources/circle.csv";
@@ -49,7 +52,7 @@ public class DataSource {
                 triangles.add(triangle);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("Error reading from file: " + csvFileTriangle, e);
         }
         return triangles;
     }

@@ -1,6 +1,7 @@
 package com.minarchenko.taskSix;
 
 import com.minarchenko.taskSix.model.Shape;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,7 +9,10 @@ import java.io.IOException;
 import java.util.*;
 
 public class Solution {
+    private static Logger logger = Logger.getLogger(Solution.class);
+
     public static void main(String[] args) throws IOException {
+        logger.trace("Start of the program");
         String csvFileTriangle = "C:/NATA/Java/Courses/EPAM/EPAM/src/main/resources/triangle.csv";
         String csvFileRectangle= "C:/NATA/Java/Courses/EPAM/EPAM/src/main/resources/rectangle.csv";
         String csvFileCircle= "C:/NATA/Java/Courses/EPAM/EPAM/src/main/resources/circle.csv";
